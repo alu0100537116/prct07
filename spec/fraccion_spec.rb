@@ -73,10 +73,15 @@ describe Fraccion do
   end
   
    describe "# Modulo <=> " do
-      it "Calculo del modulo <=>"
-	(@f1<=>@f2)
-    
-    end
-  end   
-  
+      it "Fracciones iguales " do
+	(@f1<=>@f2).should eq(0)
+      end
+      it "Fraccion mayor que " do
+	(@f3<=>@f2).should eq(1)
+      end
+      it "Fraccion menor que " do
+	(@f2<=>@f3).should eq(-1)
+      end
+    end   
+   
 end

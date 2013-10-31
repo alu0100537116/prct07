@@ -72,35 +72,10 @@ describe Fraccion do
     end
   end
   
-  describe "# Fraccion menor que otra" do
-    it "Calculo de menor" do
-      (@f2<@f3).should eq(true) 
-    end
-  end
-  
-  describe "# Fraccion mayor que otra" do
-    it "Calculo de mayor" do
-      (@f3>@f2).should eq(true) 
-    end
-  end
-  
-  describe "# Fraccion menor o igual que otra" do
-    it "Calculo de menor o igual" do
-      (@f2<=@f3).should eq(true) 
-    end
-  end
-  
-  describe "# Fraccion mayor o igual que otra" do
-    it "Calculo de mayor o igual" do
-      (@f3>@f2).should eq(true) 
-    end
-    
-    it " MODIFICACION DE CLASE " do
-       @mod1.opuesto2
-       @mod1 = @mod1*@mod2
-       @mod1.abs.should eq(Fraccion.new(-1,6))
-      
-    end
-  end   
-  
+   describe "# Modulo <=> " do
+      it "Calculo del modulo <=>" do
+	(@f1<=>@f2).should eq(0)
+      end
+    end   
+   
 end
